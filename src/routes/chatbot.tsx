@@ -9,13 +9,13 @@ import { TOOLS } from "@/lib/tools";
 export const Route = createFileRoute("/chatbot")({
   head: () => ({
     meta: [
-      { title: "AI Workplace Chatbot — Overload Workday Studio" },
+      { title: "AI Workplace Chatbot — Smart Admin Assist" },
       {
         name: "description",
         content:
           "Chat with an AI workplace assistant for quick answers, drafting help, planning advice and next steps on any task.",
       },
-      { property: "og:title", content: "AI Workplace Chatbot — Overload Workday Studio" },
+      { property: "og:title", content: "AI Workplace Chatbot — Smart Admin Assist" },
       {
         property: "og:description",
         content: "An interactive AI assistant for everyday workplace questions and drafting help.",
@@ -94,7 +94,7 @@ function ChatPage() {
               ) : (
                 <div key={index} className="max-w-[90%]">
                   <p className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
-                    Overload
+                    Smart Admin Assist
                   </p>
                   <div className="whitespace-pre-wrap text-[13px] leading-relaxed text-ink">
                     {message.content}

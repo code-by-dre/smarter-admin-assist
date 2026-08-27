@@ -7,13 +7,13 @@ import { TOOLS } from "@/lib/tools";
 export const Route = createFileRoute("/task-planner")({
   head: () => ({
     meta: [
-      { title: "AI Task Planner — Overload Workday Studio" },
+      { title: "AI Task Planner — Smart Admin Assist" },
       {
         name: "description",
         content:
           "Turn a messy task list into a prioritised daily or weekly schedule with time blocks, buffers and deferred work.",
       },
-      { property: "og:title", content: "AI Task Planner — Overload Workday Studio" },
+      { property: "og:title", content: "AI Task Planner — Smart Admin Assist" },
       {
         property: "og:description",
         content: "Prioritise tasks and generate a realistic time-blocked schedule you can edit.",
