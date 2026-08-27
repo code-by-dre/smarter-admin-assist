@@ -7,13 +7,13 @@ import { TOOLS } from "@/lib/tools";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Smart Email Generator — Overload Workday Studio" },
+      { title: "Smart Email Generator — Smart Admin Assist" },
       {
         name: "description",
         content:
-          "Draft professional workplace emails in any tone with Overload, an AI productivity dashboard for email, meeting notes, planning, research and chat.",
+          "Draft professional workplace emails in any tone with Smart Admin Assist, an AI productivity dashboard for email, meeting notes, planning, research and chat.",
       },
-      { property: "og:title", content: "Smart Email Generator — Overload Workday Studio" },
+      { property: "og:title", content: "Smart Email Generator — Smart Admin Assist" },
       {
         property: "og:description",
         content: "Generate tone-matched professional emails from a short brief, then edit before sending.",

@@ -121,7 +121,7 @@ export function GenerateWorkspace({
           </div>
         </div>
 
-        <div className="rounded-xl bg-surface p-4 ring-1 ring-black/5 sm:p-5">
+        <div className="rounded-xl bg-surface p-4 ring-1 ring-line sm:p-5">
           <textarea
             value={output}
             onChange={(event) => setOutput(event.target.value)}
@@ -153,7 +153,7 @@ export function GenerateWorkspace({
           </span>
           <p className="text-pretty text-[11px] leading-relaxed text-ink/70">
             AI-generated and editable. Always review accuracy, tone and facts before using or
-            sending. Overload never acts on your behalf — you own the final output.
+            sending. Smart Admin Assist never acts on your behalf — you own the final output.
           </p>
         </div>
       </section>

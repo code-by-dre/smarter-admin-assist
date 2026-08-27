@@ -7,13 +7,13 @@ import { TOOLS } from "@/lib/tools";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "AI Research Assistant — Overload Workday Studio" },
+      { title: "AI Research Assistant — Smart Admin Assist" },
       {
         name: "description",
         content:
           "Summarise a topic or pasted article and get key points, insights, recommended next steps and what to fact-check.",
       },
-      { property: "og:title", content: "AI Research Assistant — Overload Workday Studio" },
+      { property: "og:title", content: "AI Research Assistant — Smart Admin Assist" },
       {
         property: "og:description",
         content: "Topic and article summaries with insights, recommendations and verification notes.",

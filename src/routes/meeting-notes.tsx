@@ -7,13 +7,13 @@ import { TOOLS } from "@/lib/tools";
 export const Route = createFileRoute("/meeting-notes")({
   head: () => ({
     meta: [
-      { title: "Meeting Notes Summarizer — Overload Workday Studio" },
+      { title: "Meeting Notes Summarizer — Smart Admin Assist" },
       {
         name: "description",
         content:
           "Turn long meeting notes or transcripts into a clean summary with decisions, owners, action items and deadlines.",
       },
-      { property: "og:title", content: "Meeting Notes Summarizer — Overload Workday Studio" },
+      { property: "og:title", content: "Meeting Notes Summarizer — Smart Admin Assist" },
       {
         property: "og:description",
         content: "Extract decisions, action items and deadlines from raw meeting notes in seconds.",
