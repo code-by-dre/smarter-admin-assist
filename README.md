@@ -1,123 +1,129 @@
-# AI Productivity Hub
+# Smart Admin Assist — AI Workplace Productivity
 
-Project Overview
-You are required to design and build ONE AI-powered productivity application that helps automate workplace tasks using AI tools such as ChatGPT and Lovable AI.
+A focused AI productivity dashboard built with **TanStack Start**, **React**, and **Tailwind CSS**. Smart Admin Assist bundles five workplace tools — email drafting, meeting notes summarisation, task planning, research briefing, and a general assistant chat — behind a single, calm, editorial-style UI.
 
- 
+## Live Demo
 
-The goal is to demonstrate:
+- Preview: `https://preview--smarter-admin-assist.lovable.app/`
+- Published: `https://smarter-admin-assist.lovable.app`
 
-Practical AI implementation
+## Features
 
-Strong prompt engineering
+- **Smart Email Generator** — Draft tone-matched professional emails from a topic, recipient, tone, length, and short context brief.
+- **Meeting Notes Summarizer** — Turn raw notes or a transcript into a summary with decisions, owners, action items, and deadlines — without inventing names or dates.
+- **AI Task Planner** — Convert a messy task list into a prioritised (P1–P3), time-blocked schedule that respects working hours, energy patterns, and fixed commitments.
+- **AI Research Assistant** — Summarise a topic or pasted article into key points, insights, next steps, and what to fact-check (no live web access, and the UI says so).
+- **Assistant Chat** — Freeform chat for drafting help, prioritisation, and quick workplace questions, with suggested starter prompts.
+- **Consistent Generate Workspace** — Shared `GenerateWorkspace` component gives every tool the same input → prompt → output pattern, with chips summarising the current settings.
+- **Resilient by design** — Server-function calls are wrapped in try/catch with toast notifications on failure, so a flaky AI response never breaks the page.
+- **Responsive shell** — Shared `AppShell` layout with eyebrow/title headers keeps navigation and framing consistent across tools.
 
-Real-world problem solving
+## Tech Stack
 
-Responsible AI usage
+| Layer | Technology |
+|---|---|
+| Framework | TanStack Start |
+| UI Library | React |
+| Styling | Tailwind CSS |
+| Routing | TanStack Router (file-based) |
+| Data/Server | TanStack Query + TanStack Start server functions |
+| Notifications | Sonner |
+| Icons / UI primitives | shadcn/ui-style components |
 
-Modern UI/UX design
+## Project Structure
 
-Important Clarification
-This is ONE integrated project, not multiple projects.
-Your solution should function as a single platform/dashboard containing multiple AI-powered features.Minimum Requirements
+src/
+├── components/
 
-Your application must include 5 of the following features:
+│ ├── AppShell.tsx # Shared page shell (eyebrow, title, layout)
 
- 
+│ ├── GenerateWorkspace.tsx # Shared input → prompt → output pattern
 
- 1. Smart Email Generator
+│ └── ui/ # UI primitives (e.g. sonner Toaster)
 
-Generate professional emails
+├── lib/
 
-Support different tones (formal, friendly, persuasive)
+│ ├── ai.functions.ts # Server functions (chatReply, etc.)
 
-2. Meeting Notes Summarizer
+│ ├── tools.ts # Tool metadata (eyebrow, title) per route
 
-Summarize long notes
+│ └── lovable-error-reporting.ts
 
-Extract action items, decisions, and deadlines
+├── routes/ # TanStack file-based routes
 
-3. AI Task Planner / Scheduler
+│ ├── __root.tsx # Root layout, error/not-found boundaries
 
-Generate daily or weekly schedules
+│ ├── index.tsx # Smart Email Generator
 
-Prioritize tasks effectively
+│ ├── meeting-notes.tsx # Meeting Notes Summarizer
 
-4. AI Research Assistant
+│ ├── task-planner.tsx # AI Task Planner
 
-Summarize topics/articles
+│ ├── research.tsx # AI Research Assistant
 
-Provide insights and recommendations
+│ └── chatbot.tsx # Assistant Chat
 
-5. AI Chatbot Interface
+└── styles.css # Global theme & Tailwind config
 
-Interactive AI workplace assistant
 
-Handle user prompts and responses
+## Getting Started
 
-Expected Project Structure
+### Prerequisites
 
-Your project should include:
+- Node.js (v20+ recommended)
+- Bun or npm
 
-Dashboard Layout
-
-Sidebar Navigation
-
-Responsive Design (mobile + desktop)
-
-Input & Output Sections
-
-AI-generated responses
-
-Professional UI/UX
-
-Responsible AI disclaimerThe application should include:
-
-Smart Email Generator
-
-Meeting Notes Summarizer
-
-AI Task Planner
-
-AI Research Assistant
-
-AI Chatbot Interface
-
-Requirements:
-
-Modern dashboard UI
-
-Sidebar navigation
-
-Responsive design
-
-Structured AI prompts
-
-Editable AI outputs
-
-Responsible AI disclaimer
-
-Design style should be clean, modern, and professional similar to a SaaS platform.”
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://smarter-admin-assist.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/14b6f0f8-f75d-4b5f-bdaf-963f89779c15).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Install Dependencies
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+bun install
+# or
+npm install
+```
+
+### Run Development Server
+
+```sh
+bun run dev
+# or
 npm run dev
 ```
+
+Open `http://localhost:8080` in your browser.
+
+### Build for Production
+
+```sh
+bun run build
+# or
+npm run build
+```
+
+## Deployment
+
+This project is configured for Lovable Cloud / edge deployment. Connect your GitHub repository in the Lovable editor to enable automatic deployments on every push.
+
+## Customization
+
+- **Tools**: Add or edit entries in `src/lib/tools.ts` to change the eyebrow/title shown per route.
+- **Prompts & fields**: Each tool route (`index.tsx`, `meeting-notes.tsx`, `task-planner.tsx`, `research.tsx`) defines its own `EMPTY` field state and form layout — edit these to change inputs.
+- **AI logic**: Server-side generation logic lives in `src/lib/ai.functions.ts`.
+- **Theme**: Adjust design tokens and colors in `src/styles.css`.
+- **Routes**: Add new pages under `src/routes/` using TanStack Router file-based conventions.
+
+## Disclaimer
+
+AI-generated responses can be wrong or outdated. Verify anything important before acting on it, and keep confidential data out of prompts.
+
+## License
+
+MIT — feel free to fork, remix, and ship your own version.
+
+---
+
+## Built with
+
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
