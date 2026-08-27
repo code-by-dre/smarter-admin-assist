@@ -16,12 +16,14 @@ export function AppShell({
       <div className="flex min-h-screen">
         <aside className="hidden w-[248px] shrink-0 flex-col border-r border-line bg-surface md:flex">
           <div className="flex h-16 items-center gap-2.5 px-5">
-            <div className="grid size-7 place-items-center rounded-md bg-brand text-[13px] font-semibold text-paper">
-              O
+            <div className="grid size-7 place-items-center rounded-md bg-brand text-[12px] font-semibold text-paper">
+              SA
             </div>
             <div className="leading-tight">
-              <p className="text-[13px] font-semibold">Overload</p>
-              <p className="text-[10px] uppercase tracking-[0.14em] text-muted">Workday Studio</p>
+              <p className="text-[13px] font-semibold">Smart Admin Assist</p>
+              <p className="text-[10px] uppercase tracking-[0.14em] text-muted">
+                AI workplace co-pilot
+              </p>
             </div>
           </div>
 
