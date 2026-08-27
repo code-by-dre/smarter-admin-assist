@@ -77,7 +77,7 @@ export function AppShell({
           <div className="flex h-16 items-center justify-between gap-4 border-b border-line bg-surface/80 px-4 backdrop-blur-sm sm:px-6">
             <div className="flex min-w-0 items-center gap-3">
               <div className="grid size-7 shrink-0 place-items-center rounded-md bg-brand text-[12px] font-semibold text-paper md:hidden">
-                O
+                SA
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] uppercase tracking-[0.14em] text-muted">{eyebrow}</p>
